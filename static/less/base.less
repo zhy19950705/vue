@@ -1,0 +1,124 @@
+@import "./variable.less";
+@theme_hover:red;
+
+//reset
+html,
+body,
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6,
+div,
+ul,
+ol,
+li,
+p,
+table,
+th,
+td,
+form,
+input,
+button,
+menu{
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer{
+  display: block;  //块级元素
+}
+
+table{
+  border-collapse: collapse;  //合并表格边框
+  border-spacing: 0;  //间距
+}
+
+th{
+  text-align: left;
+  font-weight: normal;  //字体粗细
+}
+
+html,
+body{
+  border:0;
+  height: 100%;
+}
+
+i,
+cite,
+em,
+var{
+  font-style: normal;  //字体样式默认normal,italic倾斜
+}
+
+li{
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-size:100%;
+}
+
+a,
+button{
+  cursor:pointer;//光标类型 pointer	光标呈现为指示链接的指针（一只手）
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+em,
+strong,
+b{
+  font-weight:bold;
+}
+
+body{
+  background: @base_color;
+  font-size:@base_textSize;
+}
+
+a{
+  text-decoration: none;
+  border:none;
+  outline: none;//轮廓线
+}
+
+.flex {
+  display: -webkit-flex;/*Safari*/
+  display: flex;
+}
+
+.flex_between{
+  .flex();
+  justify-content: space-between;
+}
+
+.flex_align_center {
+  .flex();
+  //flex-direction: row-reverse;
+  align-items: center;  //中心对齐
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.containner{
+  flex:1;
+  padding-top: .8rem;
+  padding-bottom: .88rem;
+}
