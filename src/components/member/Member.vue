@@ -15,7 +15,7 @@
            <p>我的订单</p>
            <img src="../../../static/img/icon/arrowBack.png" alt="" />
          </div>
-         <div class="floor floor_item floor_two flex_align_center flex_between">
+         <div class="floor floor_item floor_two flex_align_center flex_between" @click="onAddress">
            <p>我的地址</p>
            <img src="../../../static/img/icon/arrowBack.png" alt="" />
          </div>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 import Headers from '../base/Header';
 import Footers from '../base/Footer';
 
@@ -33,7 +34,7 @@ export default {
   data() {
     return {
       slideName: 'slide-go',
-      mainArea: true,
+      mainArea: false,
     };
   },
   components: {
@@ -44,6 +45,26 @@ export default {
     onInfo() {
       this.$router.push('./info');
     },
+    onAddress() {
+      this.$router.push('./address');
+    },
+    ...mapMutations({
+      setComname: 'SET_COMNAME',
+    }),
+  },
+  computed: {
+    ...mapGetters([
+      'this.$store.state.comname',
+    ]),
+  },
+  mounted() {
+    this.mainArea = true;
+    if (this.$store.state.comname === 'index' || this.$store.state.comname === 'category' || this.$store.state.comname === 'cart') {
+      this.slideName = 'slide-go';
+    } else {
+      this.slideName = 'slide-back';
+    }
+    this.setComname('member');
   },
 };
 </script>

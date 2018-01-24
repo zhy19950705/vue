@@ -21,6 +21,18 @@ const Info = (resolve) => {
   });
 };
 
+const Address = (resolve) => {
+  import('@/components/address/Address').then((module) => {
+    resolve(module);
+  });
+};
+
+const AddAddress = (resolve) => {
+  import('@/components/address/AddAddress').then((module) => {
+    resolve(module);
+  });
+};
+
 export default new Router({
   //  mode:'history'
   routes: [
@@ -45,8 +57,16 @@ export default new Router({
       component: Member,
     },
     {
-      path:'/info',
-      component:Info,
+      path: '/info',
+      component: Info,
+    },
+    {
+      path: '/address',
+      component: Address,
+    },
+    {
+      path: '/addaddress',
+      component: AddAddress,
     },
   ],
 });
