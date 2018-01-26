@@ -2,7 +2,7 @@
     <div class="page">
       <headersec tabname="我的地址"></headersec>
       <transition :name="slideName">
-        <div class="containner" v-show="mainArea">
+        <div class="container" v-show="mainArea">
           <div v-show="false">
             !havePage
           </div>

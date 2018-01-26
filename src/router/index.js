@@ -33,6 +33,12 @@ const AddAddress = (resolve) => {
   });
 };
 
+const Cart = (resolve) => {
+  import('@/components/cart/Cart').then((module) => {
+    resolve(module);
+  });
+};
+
 export default new Router({
   //  mode:'history'
   routes: [
@@ -50,7 +56,7 @@ export default new Router({
     },
     {
       path: '/cart',
-      component: Index,
+      component: Cart,
     },
     {
       path: '/member',

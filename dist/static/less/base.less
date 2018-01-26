@@ -117,7 +117,7 @@ a{
   height: 100%;
 }
 
-.containner{
+.container{
   flex:1;
   padding-top: .8rem;
   padding-bottom: .88rem;
@@ -134,6 +134,17 @@ a{
 .slide-go-leave-active{
   transition: all .5s;
   opacity: .8;
+}
+
+.slide-back-enter,
+.slide-back-leave-to{
+  transition:all .5s;
+  transform: translate3d(-100%,0,0);
+}
+
+.slide-back-enter-active,
+.slide-back-leave-active{
+  transition: all .5s;
 }
 
 .goods-price{

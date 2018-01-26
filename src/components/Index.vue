@@ -2,7 +2,7 @@
    <div class="page">
      <headers tabname="零食商店"></headers>
      <transition :name="slideName">
-        <div class="containner" v-show="mainArea">
+        <div class="container" v-show="mainArea">
            <div class="content" v-cloak>
              <!--eslint-disable-->
               <div class="floorItem" v-for="(productItem, productIndex) in productList">

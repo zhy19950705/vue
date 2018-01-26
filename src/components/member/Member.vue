@@ -2,7 +2,7 @@
    <div class="page">
      <headers tabname="我的"></headers>
      <transition :name="slideName">
-       <div class="containner" v-show="mainArea">
+       <div class="container" v-show="mainArea">
          <div class="floor floor_one">
            <img src="../../../static/img/github.png" alt="" />
            <p>Open Free Share</p>

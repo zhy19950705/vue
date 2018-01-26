@@ -2,7 +2,7 @@
     <div class="page">
       <headerSec tabname="添加地址"></headerSec>
       <transition :name="slideName">
-        <div class="containner" v-show="mainArea">
+        <div class="container" v-show="mainArea">
           <input type="text" placeholder="选择地区" :value="addressText"
                  readonly="" @click="addressModel=true"/>
           <div class="model" v-show="addressModel" @click="addressModel=false">

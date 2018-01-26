@@ -2,7 +2,7 @@
    <div class="page">
        <header-sec tabname="个人信息 "></header-sec>
      <transition name="slide-go">
-       <div class="containner" v-show="mainArea">
+       <div class="container" v-show="mainArea">
          <img src="../../../static/img/1.jpg" alt="" />
          <p>小成成是最棒的</p>
          <!--eslint-disable-next-line-->
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .containner{
+  .container{
     text-align: center;
     img{
       margin-top: .3rem;

@@ -47,6 +47,7 @@ export default {
     height: .90rem;
     background: @base_color;
     box-shadow: 0 -2px 9px rgba(0,0,0,.1);
+    border-bottom: 1px solid #ccc;
   }
   .footer-item{
     width: 25%;
